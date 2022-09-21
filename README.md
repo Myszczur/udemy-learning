@@ -1,2 +1,2 @@
 # udemy-learning
-Arepository for projects from udemy
+A repository for projects from udemy
