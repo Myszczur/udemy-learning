@@ -1,8 +1,12 @@
 package simple_tcp;
 
+import java.io.IOException;
+import java.net.ServerSocket;
+
 public class Server {
 
-    public Server() {
+    public Server() throws IOException {
+        ServerSocket serverSocket = new ServerSocket(2020);
 
     }
 
