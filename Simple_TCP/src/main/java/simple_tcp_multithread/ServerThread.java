@@ -9,16 +9,18 @@ import java.net.Socket;
 public class ServerThread implements Runnable {
 
     private Socket socket;
+    private MainServer mainServer;
 
-    public ServerThread(Socket socket) {
-
+    public ServerThread(Socket socket, MainServer mainServer) {
+        this.mainServer = mainServer;
         this.socket = socket;
     }
 
     @Override
     public void run() {
         try {
-            System.out.println("Client has connected.");
+            int clientNumber = mainServer.getClientNumber();
+            System.out.println("Client" + clientNumber + " has connected.");
 
             BufferedReader in_socket = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintWriter out_socket = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
@@ -28,7 +30,7 @@ public class ServerThread implements Runnable {
             System.out.println("Client says: " + message); //display clients message int he console
 
             socket.close();
-            System.out.println("Socket is closed.");
+            System.out.println("Client " + clientNumber + " has disconnected.");
 
         } catch (Exception e) {
             // TODO: handle exception
