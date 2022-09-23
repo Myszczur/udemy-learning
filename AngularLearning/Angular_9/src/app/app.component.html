@@ -1,0 +1,20 @@
+<app-header></app-header>
+The data we received from the component: {{title}}
+
+<div
+  [style.color]="style1 == true ? 'blue' : 'white'"
+  [style.background-color]="newStyle()"
+  [style.border]="'1px solid black'">
+  Some text
+</div>
+
+<button (click)="onClick($event)">Click me</button><br/>
+
+<input type="text" [(ngModel)]="inputVal"/>
+
+<ul *ngFor="let data of collectedData">
+  <li>{{data}}</li>
+</ul>
+
+
+<router-outlet></router-outlet>
