@@ -7,8 +7,16 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
 
+  ngIfStatus: boolean = true;
   inputVal: string = "";
   collectedData = [];
+  ngForArray = [
+    "Tea", "Cup", "Sugar", "Coffee", "Milk"
+  ];
+  ngForArray2 = [
+    {"id": "122", "name": "John", "subject": "English"},
+    {"id": "233", "name": "marian", "subject": "Science"}
+  ];
   title: string = 'Angular_9';
   style1: boolean = false;
 
