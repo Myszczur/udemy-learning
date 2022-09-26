@@ -5,12 +5,14 @@ import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {FormsModule} from "@angular/forms";
 import { ColorChangerDirective } from './color-changer.directive';
+import { MyIjDirective } from './my-ij.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ColorChangerDirective
+    ColorChangerDirective,
+    MyIjDirective
   ],
   imports: [
     BrowserModule,

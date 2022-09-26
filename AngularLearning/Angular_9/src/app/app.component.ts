@@ -7,6 +7,8 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
 
+  inputValue: string = "This is some string";
+  condition: boolean = true;
   ngIfStatus: boolean = true;
   inputVal: string = "";
   ngSwitchSource: string = "angular";

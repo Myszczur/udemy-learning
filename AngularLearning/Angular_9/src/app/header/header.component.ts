@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  @Input() getInput: string | undefined;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+    console.log(this.getInput + "two headers");
   }
 
 }

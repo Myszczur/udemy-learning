@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header [getInput]="inputValue"></app-header>
 
 <div appColorChanger [bgColor]="'orange'" [txtColor]="'blue'">
   Directive DIV
@@ -63,6 +63,13 @@ The data we received from the component: {{title}}
   <div *ngSwitchDefault>
     So the source is default
   </div>
+</div>
+
+<div *appMyIj="condition">
+This has to shown if the condition is true
+</div>
+<div *appMyIj="!condition">
+  This has to shown if the condition is false
 </div>
 
 <router-outlet></router-outlet>
