@@ -50,5 +50,19 @@ The data we received from the component: {{title}}
   </li>
 </ul>
 
+<div [ngSwitch]="ngSwitchSource">
+  <div *ngSwitchCase="'JavaScript'">
+    So the source is javaScript
+  </div>
+  <div *ngSwitchCase="'TypeScript'">
+    So the source is TypeScript
+  </div>
+  <div *ngSwitchCase="'angular'">
+    So the source is angular
+  </div>
+  <div *ngSwitchDefault>
+    So the source is default
+  </div>
+</div>
 
 <router-outlet></router-outlet>

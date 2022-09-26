@@ -9,6 +9,7 @@ export class AppComponent {
 
   ngIfStatus: boolean = true;
   inputVal: string = "";
+  ngSwitchSource: string = "angular";
   collectedData = [];
   ngForArray = [
     "Tea", "Cup", "Sugar", "Coffee", "Milk"
