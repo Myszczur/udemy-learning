@@ -18,6 +18,5 @@ export class AppComponent {
         console.log(this.posts);
       });
   }
-
   title = 'CoronaApp';
 }
