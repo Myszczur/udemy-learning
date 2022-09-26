@@ -5,7 +5,7 @@
 </div>
 
 <div appColorChanger [txtColor]="'red'">
-Another directive
+  Another directive
 </div>
 
 The data we received from the component: {{title}}
@@ -35,5 +35,20 @@ The data we received from the component: {{title}}
 <ng-template #elseBlock>
   This is the else block
 </ng-template>
+<ul>
+  <li *ngFor="let eachNgForArray of ngForArray">
+    {{eachNgForArray}}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let eachNgForArray2 of ngForArray2; let i = index">
+    {{i}})
+    {{eachNgForArray2.id}}
+    {{eachNgForArray2.name}}
+    {{eachNgForArray2.subject}}
+  </li>
+</ul>
+
 
 <router-outlet></router-outlet>
