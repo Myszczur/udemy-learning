@@ -7,6 +7,7 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
 
+  ngIfStatus: boolean = true;
   inputVal: string = "";
   collectedData = [];
   title: string = 'Angular_9';

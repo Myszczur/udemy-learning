@@ -1,4 +1,13 @@
 <app-header></app-header>
+
+<div appColorChanger [bgColor]="'orange'" [txtColor]="'blue'">
+  Directive DIV
+</div>
+
+<div appColorChanger [txtColor]="'red'">
+Another directive
+</div>
+
 The data we received from the component: {{title}}
 
 <div
@@ -16,5 +25,15 @@ The data we received from the component: {{title}}
   <li>{{data}}</li>
 </ul>
 
+
+<div *ngIf="ngIfStatus; then thenBlock; else elseBlock">
+
+</div>
+<ng-template #thenBlock>
+  So, the ngIfStatus variable is true
+</ng-template>
+<ng-template #elseBlock>
+  This is the else block
+</ng-template>
 
 <router-outlet></router-outlet>
