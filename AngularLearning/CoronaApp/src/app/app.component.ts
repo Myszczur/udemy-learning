@@ -7,16 +7,15 @@ import {HttpClient, HttpParams} from "@angular/common/http";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  posts: any;
+  globalData: any;
 
-  constructor(private http: HttpClient) {
-    let params = new HttpParams().set("userId", "1");
-    this.http
-      .get("https://jsonplaceholder.typicode.com/posts", {params})
+  constructor(public http: HttpClient) {
+    this.http.get('https://api.covid19api.com/summary')
       .subscribe((value: any) => {
-        this.posts = value;
-        console.log(this.posts);
+        console.log(value);
+        this.globalData = value.Global;
       });
   }
+
   title = 'CoronaApp';
 }
