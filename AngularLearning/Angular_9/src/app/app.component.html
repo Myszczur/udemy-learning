@@ -1,4 +1,13 @@
-<app-header></app-header>
+<app-header [getInput]="inputValue"></app-header>
+
+<div appColorChanger [bgColor]="'orange'" [txtColor]="'blue'">
+  Directive DIV
+</div>
+
+<div appColorChanger [txtColor]="'red'">
+  Another directive
+</div>
+
 The data we received from the component: {{title}}
 
 <div
@@ -16,5 +25,51 @@ The data we received from the component: {{title}}
   <li>{{data}}</li>
 </ul>
 
+
+<div *ngIf="ngIfStatus; then thenBlock; else elseBlock">
+
+</div>
+<ng-template #thenBlock>
+  So, the ngIfStatus variable is true
+</ng-template>
+<ng-template #elseBlock>
+  This is the else block
+</ng-template>
+<ul>
+  <li *ngFor="let eachNgForArray of ngForArray">
+    {{eachNgForArray}}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let eachNgForArray2 of ngForArray2; let i = index">
+    {{i}})
+    {{eachNgForArray2.id}}
+    {{eachNgForArray2.name}}
+    {{eachNgForArray2.subject}}
+  </li>
+</ul>
+
+<div [ngSwitch]="ngSwitchSource">
+  <div *ngSwitchCase="'JavaScript'">
+    So the source is javaScript
+  </div>
+  <div *ngSwitchCase="'TypeScript'">
+    So the source is TypeScript
+  </div>
+  <div *ngSwitchCase="'angular'">
+    So the source is angular
+  </div>
+  <div *ngSwitchDefault>
+    So the source is default
+  </div>
+</div>
+
+<div *appMyIj="condition">
+This has to shown if the condition is true
+</div>
+<div *appMyIj="!condition">
+  This has to shown if the condition is false
+</div>
 
 <router-outlet></router-outlet>
