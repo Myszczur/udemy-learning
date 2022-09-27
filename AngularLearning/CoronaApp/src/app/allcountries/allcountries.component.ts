@@ -12,5 +12,8 @@ export class AllcountriesComponent implements OnChanges {
   }
 
   ngOnChanges() {
+    this.allCountriesData.sort((a: any, b: any) => {
+      return b.TotalConfirmed - a.TotalConfirmed;
+    });
   }
 }
