@@ -7,7 +7,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatBadgeModule} from "@angular/material/badge";
 import {MatChipsModule} from "@angular/material/chips";
-
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import {MatChipsModule} from "@angular/material/chips";
     MatButtonModule,
     MatButtonToggleModule,
     MatBadgeModule,
-    MatChipsModule
+    MatChipsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
