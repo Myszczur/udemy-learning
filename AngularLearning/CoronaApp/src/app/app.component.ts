@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {HttpClient, HttpParams} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-root',
@@ -7,16 +7,22 @@ import {HttpClient, HttpParams} from "@angular/common/http";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  posts: any;
+  globalData: any = {};
+  allCountriesData: any = [];
+  usData: any = {};
 
-  constructor(private http: HttpClient) {
-    let params = new HttpParams().set("userId", "1");
-    this.http
-      .get("https://jsonplaceholder.typicode.com/posts", {params})
+  constructor(public http: HttpClient) {
+    this.http.get('https://api.covid19api.com/summary')
       .subscribe((value: any) => {
-        this.posts = value;
-        console.log(this.posts);
+        this.globalData = value.Global;
+        this.allCountriesData = value.Countries;
+        this.allCountriesData.forEach((countryList: any) => {
+          if (countryList.CountryCode == "US") {
+            this.usData = countryList;
+          }
+        });
       });
   }
+
   title = 'CoronaApp';
 }
