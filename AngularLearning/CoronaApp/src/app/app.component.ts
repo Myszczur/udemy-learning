@@ -8,15 +8,18 @@ import {HttpClient} from "@angular/common/http";
 })
 export class AppComponent {
   globalData: any = {};
-  allcountryData: any = {};
+  allCountriesData: any = {};
   usData: any = {};
 
   constructor(public http: HttpClient) {
     this.http.get('https://api.covid19api.com/summary')
       .subscribe((value: any) => {
         this.globalData = value.Global;
-        this.allcountryData = value.Countries;
-        this.allcountryData.forEach((countryList: any) => {
+        this.allCountriesData = value.Countries;
+        this.allCountriesData.sort((a: any, b: any) => {
+          return b.TotalConfirmed - a.TotalConfirmed;
+        });
+        this.allCountriesData.forEach((countryList: any) => {
           if (countryList.CountryCode == "US") {
             this.usData = countryList;
           }

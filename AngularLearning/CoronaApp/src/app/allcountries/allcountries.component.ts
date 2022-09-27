@@ -6,13 +6,11 @@ import {Component, OnChanges, Input} from '@angular/core';
   styleUrls: ['./allcountries.component.css']
 })
 export class AllcountriesComponent implements OnChanges {
-  @Input() allCountriesData:any;
+  @Input() allCountriesData: any;
 
   constructor() {
   }
 
   ngOnChanges() {
-    console.log(this.allCountriesData);
   }
-
 }
