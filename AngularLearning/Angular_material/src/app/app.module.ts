@@ -6,6 +6,8 @@ import {MatSliderModule} from "@angular/material/slider";
 import {MatButtonModule} from "@angular/material/button";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatBadgeModule} from "@angular/material/badge";
+import {MatChipsModule} from "@angular/material/chips";
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import {MatBadgeModule} from "@angular/material/badge";
     MatSliderModule,
     MatButtonModule,
     MatButtonToggleModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
