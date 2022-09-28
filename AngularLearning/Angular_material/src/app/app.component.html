@@ -1,6 +1,24 @@
 <div class="container"><h1>Plain Heading</h1>
 
 
+  <mat-toolbar color="primary">The title</mat-toolbar>
+  <br>
+  <mat-toolbar color="accent">
+    <mat-toolbar-row>The first title row</mat-toolbar-row>
+    <br>
+    <mat-toolbar-row>The second title row</mat-toolbar-row>
+  </mat-toolbar>
+  <br><br>
+  <mat-grid-list cols="3" rowHeight="100px">
+    <mat-grid-tile colspan="3">Header</mat-grid-tile>
+    <mat-grid-tile colspan="3">Navigation</mat-grid-tile>
+    <mat-grid-tile>Content 1</mat-grid-tile>
+    <mat-grid-tile>Content 2</mat-grid-tile>
+    <mat-grid-tile>Content 3</mat-grid-tile>
+    <mat-grid-tile colspan="3">Footer</mat-grid-tile>
+  </mat-grid-list>
+
+  <br><br>
   <mat-grid-list cols="3" gutterSize="50px" rowHeight="100px">
     <mat-grid-tile>1</mat-grid-tile>
     <mat-grid-tile>2</mat-grid-tile>

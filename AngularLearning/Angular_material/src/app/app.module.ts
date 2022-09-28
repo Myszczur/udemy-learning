@@ -17,6 +17,7 @@ import {MatListModule} from "@angular/material/list";
 import {MatStepperModule} from "@angular/material/stepper";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatGridListModule} from "@angular/material/grid-list";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {MatGridListModule} from "@angular/material/grid-list";
     MatListModule,
     MatStepperModule,
     MatTabsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
