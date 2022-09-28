@@ -20,6 +20,7 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     MatGridListModule,
     MatToolbarModule,
     MatMenuModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
