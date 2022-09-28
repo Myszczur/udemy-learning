@@ -1,0 +1,251 @@
+<div class="container"><h1>Plain Heading</h1>
+
+
+  <table mat-table [dataSource]="table_data">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Student Name</th>
+      <td mat-cell *matCellDef="let student">{{student.name}}</td>
+    </ng-container>
+    <ng-container matColumnDef="subject">
+      <th mat-header-cell *matHeaderCellDef>Student subject</th>
+      <td mat-cell *matCellDef="let student">{{student.subject}}</td>
+    </ng-container>
+    <ng-container matColumnDef="rollNo">
+      <th mat-header-cell *matHeaderCellDef>Student rollNo</th>
+      <td mat-cell *matCellDef="let student">{{student.rollNo}}</td>
+    </ng-container>
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef>Student age</th>
+      <td mat-cell *matCellDef="let student">{{student.age}}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="col_names"></tr>
+    <tr mat-row *matRowDef="let row; columns: col_names;"></tr>
+  </table>
+
+  <br><br>
+
+  <mat-paginator [length]="100" [pageSize]="20" [pageSizeOptions]="[5,10,20]">
+
+  </mat-paginator>
+  <br><br>
+  <mat-sidenav-container>
+    <mat-sidenav mode="over" #sidenav opened>The SideNav</mat-sidenav>
+    <mat-sidenav mode="push" #sidnaved opened>The right sidenav</mat-sidenav>
+    <div>
+      <p>The main content</p>
+      <button mat-button (click)="sidenav.toggle()">Toggle the side nav</button>
+      <button mat-button (click)="sidnaved.toggle()">Toggle the side nav</button>
+    </div>
+  </mat-sidenav-container>
+  <br><br>
+  <mat-drawer-container>
+    <mat-drawer mode="side" opened #sideDrawer>The side drawer</mat-drawer>
+    <mat-drawer-content>Somethings
+      <button mat-button (click)="sideDrawer.toggle()">Click</button>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+  <br><br>
+  <button mat-button [matMenuTriggerFor]="menu">Open Menu</button>
+  <mat-menu #menu="matMenu" yPosition="below" xPosition="after">
+    <button mat-menu-item>1 Item</button>
+    <button mat-menu-item>2 Item</button>
+    <button mat-menu-item>3 Item</button>
+    <button mat-menu-item [matMenuTriggerFor]="subMenu">4 Item</button>
+  </mat-menu>
+  <mat-menu #subMenu="matMenu" yPosition="below" xPosition="after">
+    <button mat-menu-item>1 Item</button>
+    <button mat-menu-item>2 Item</button>
+    <button mat-menu-item>3 Item</button>
+    <button mat-menu-item>4 Item</button>
+  </mat-menu>
+  <br><br>
+  <mat-toolbar color="primary">The title</mat-toolbar>
+  <br>
+  <mat-toolbar color="accent">
+    <mat-toolbar-row>The first title row</mat-toolbar-row>
+    <br>
+    <mat-toolbar-row>The second title row</mat-toolbar-row>
+  </mat-toolbar>
+  <br><br>
+  <mat-grid-list cols="3" rowHeight="100px">
+    <mat-grid-tile colspan="3">Header</mat-grid-tile>
+    <mat-grid-tile colspan="3">Navigation</mat-grid-tile>
+    <mat-grid-tile>Content 1</mat-grid-tile>
+    <mat-grid-tile>Content 2</mat-grid-tile>
+    <mat-grid-tile>Content 3</mat-grid-tile>
+    <mat-grid-tile colspan="3">Footer</mat-grid-tile>
+  </mat-grid-list>
+
+  <br><br>
+  <mat-grid-list cols="3" gutterSize="50px" rowHeight="100px">
+    <mat-grid-tile>1</mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="4" rowHeight="4:3">
+    <mat-grid-tile>11</mat-grid-tile>
+    <mat-grid-tile>22</mat-grid-tile>
+    <mat-grid-tile>33</mat-grid-tile>
+    <mat-grid-tile>332</mat-grid-tile>
+  </mat-grid-list>
+  <br><br>
+  <mat-tab-group mat-align-tabs="end" animationDuration="1000ms">
+    <mat-tab label="Tab 1">
+      <p>Some dummy data</p>
+    </mat-tab>
+    <mat-tab label="Tab 2">
+      <p>Some dummy data 2</p>
+    </mat-tab>
+    <mat-tab label="Tab 3">
+      <p>Table 3</p>
+    </mat-tab>
+  </mat-tab-group>
+
+  <br><br>
+  <mat-vertical-stepper>
+    <mat-step label="Step 1">
+      <p>The step 1</p>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step label="Step 2">
+      <p>The step 2</p>
+    </mat-step>
+  </mat-vertical-stepper>
+  <mat-horizontal-stepper>
+    <mat-step label="Step 1">
+      <p>The step 1</p>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step label="Step 2">
+      <p>The step 2</p>
+    </mat-step>
+  </mat-horizontal-stepper>
+
+  <br><br>
+  <mat-list>
+    <mat-list-item>Milk</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Tea</mat-list-item>
+    <mat-list-item>Water</mat-list-item>
+    <mat-list-item>Sugar</mat-list-item>
+  </mat-list>
+
+  <mat-nav-list>
+    <a mat-list-item href="#">Item 1</a>
+    <a mat-list-item href="#">Item 2</a>
+  </mat-nav-list>
+
+  <mat-action-list>
+    <button mat-list-item>Click me</button>
+    <button mat-list-item>Click me please</button>
+  </mat-action-list>
+  <mat-selection-list>
+    <mat-list-option>Option 1</mat-list-option>
+    <mat-list-option>Option 2</mat-list-option>
+  </mat-selection-list>
+
+  <br><br>
+  <div class="card-class">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>The main title</mat-card-title>
+          <mat-card-subtitle>The sub title</mat-card-subtitle>
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Some dummy text</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button>Share</button>
+        <button mat-raised-button>Close</button>
+      </mat-card-actions>
+      <mat-card-footer>zcx</mat-card-footer>
+    </mat-card>
+  </div>
+
+  <br><br>
+  <mat-progress-bar mode="determinate" value="40" color="warn"></mat-progress-bar>
+  <br><br>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  <br><br>
+  <mat-progress-bar mode="buffer"></mat-progress-bar>
+  <br><br>
+  <mat-progress-bar mode="query" color="accent"></mat-progress-bar>
+  <br><br>
+
+  <br><br>
+  <mat-spinner></mat-spinner>
+  <br><br>
+  <mat-progress-spinner value="5"></mat-progress-spinner>
+  <br><br>
+  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+
+  <br><br>
+  <mat-icon>home</mat-icon>
+  <mat-icon color="warn">face</mat-icon>
+
+  <br><br>
+  <mat-chip-list>
+    <mat-chip color="accent" selected>1st chip</mat-chip>
+    <mat-chip color="primary" selected>2st chip</mat-chip>
+    <mat-chip>3st chip</mat-chip>
+    <mat-chip disabled color="accent" selected>4st chip</mat-chip>
+  </mat-chip-list>
+
+  <br><br>
+  <button mat-button color="warn">Click Me!</button>
+  <br/>
+  <button mat-button color="primary">Click Me!</button>
+  <br/>
+  <button mat-raised-button color="primary">Click Me!</button>
+  <br/>
+  <button mat-flat-button color="primary">Click Me!</button>
+  <br/>
+  <button mat-stroked-button color="primary">Click Me!</button>
+  <br/>
+  <button mat-icon-button color="primary">Click Me!</button>
+  <br/>
+  <button mat-fab color="primary">Click Me!</button>
+  <br/>
+  <button mat-mini-fab color="primary">Click Me!</button>
+  <br/>
+
+  <a href="#" mat-mini-fab color="primary">Click Href!</a><br/>
+
+  <div>
+    <mat-button-toggle-group appearance="legacy" name="toggle_data" vertical>
+      <mat-button-toggle value="1st-button"> Click Here</mat-button-toggle>
+      <mat-button-toggle value="2st-button"> Click Here please</mat-button-toggle>
+      <mat-button-toggle value="3st-button"> Here please</mat-button-toggle>
+    </mat-button-toggle-group>
+
+  </div>
+  <br><br>
+
+  <div>
+    <span matBadge="4" matBadgeOverlap="false">Some text</span><br><br>
+    <button mat-button matBadge="4">The Button</button>
+    <br><br>
+    <button mat-raised-button color="accent" matBadge="3" matBadgeColor="primary" matBadgePosition="before">The second
+      Button
+    </button>
+    <br><br>
+    <span matBadge="17" matBadgeOverlap="false" matBadgePosition="before">notifier</span>
+    <span matBadge="17" matBadgeOverlap="false" matBadgeSize="large">notifier</span>
+  </div>
+
+  <h1 class="mat-display-1">The main Heading</h1>
+  <h1 class="mat-display-2">The second main Heading</h1>
+  <h1 class="mat-display-3">The Third main Heading</h1>
+  <h1 class="mat-display-4">The forth main Heading</h1>
+
+  <h1 class="mat-h2 mat-headline">Headline</h1>
+  <h1 class="mat-h2 mat-title">Title</h1>
+  <h1 class="mat-h3 mat-subheading-1">Title</h1>
+  <h1 class="mat-h3 mat-subheading-2">Title</h1>
+
+  <h1 class="mat-body mat-body-1">Body</h1>
+  <h1 class="mat-body-strong mat-body-2">Body</h1>
+</div>

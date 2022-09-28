@@ -1,0 +1,19 @@
+
+.container {
+  margin: 20px;
+  padding: 20px;
+}
+
+.card-class {
+  width: 200px;
+}
+
+mat-grid-tile{
+  background: lightgreen;
+}
+
+mat-drawer-container{
+  width: 300px;
+  height: 400px;
+  border: 1px solid gray;
+}
