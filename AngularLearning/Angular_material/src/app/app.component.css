@@ -11,3 +11,9 @@
 mat-grid-tile{
   background: lightgreen;
 }
+
+mat-drawer-container{
+  width: 300px;
+  height: 400px;
+  border: 1px solid gray;
+}

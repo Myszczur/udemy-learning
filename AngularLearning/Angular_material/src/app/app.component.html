@@ -1,6 +1,24 @@
 <div class="container"><h1>Plain Heading</h1>
 
-<button mat-button [matMenuTriggerFor]="menu">Open Menu</button>
+  <mat-sidenav-container>
+    <mat-sidenav mode="over" #sidenav opened>The SideNav</mat-sidenav>
+    <mat-sidenav mode="push" #sidnaved opened>The right sidenav</mat-sidenav>
+    <div>
+      <p>The main content</p>
+      <button mat-button (click)="sidenav.toggle()">Toggle the side nav</button>
+      <button mat-button (click)="sidnaved.toggle()">Toggle the side nav</button>
+    </div>
+  </mat-sidenav-container>
+  <br><br>
+  <mat-drawer-container>
+    <mat-drawer mode="side" opened #sideDrawer>The side drawer</mat-drawer>
+    <mat-drawer-content>Somethings
+      <button mat-button (click)="sideDrawer.toggle()">Click</button>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+  <br><br>
+  <button mat-button [matMenuTriggerFor]="menu">Open Menu</button>
   <mat-menu #menu="matMenu" yPosition="below" xPosition="after">
     <button mat-menu-item>1 Item</button>
     <button mat-menu-item>2 Item</button>
