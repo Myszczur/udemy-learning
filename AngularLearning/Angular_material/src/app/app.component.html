@@ -1,6 +1,19 @@
 <div class="container"><h1>Plain Heading</h1>
 
-
+<button mat-button [matMenuTriggerFor]="menu">Open Menu</button>
+  <mat-menu #menu="matMenu" yPosition="below" xPosition="after">
+    <button mat-menu-item>1 Item</button>
+    <button mat-menu-item>2 Item</button>
+    <button mat-menu-item>3 Item</button>
+    <button mat-menu-item [matMenuTriggerFor]="subMenu">4 Item</button>
+  </mat-menu>
+  <mat-menu #subMenu="matMenu" yPosition="below" xPosition="after">
+    <button mat-menu-item>1 Item</button>
+    <button mat-menu-item>2 Item</button>
+    <button mat-menu-item>3 Item</button>
+    <button mat-menu-item>4 Item</button>
+  </mat-menu>
+  <br><br>
   <mat-toolbar color="primary">The title</mat-toolbar>
   <br>
   <mat-toolbar color="accent">
