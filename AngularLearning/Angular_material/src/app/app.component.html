@@ -1,5 +1,29 @@
 <div class="container"><h1>Plain Heading</h1>
 
+
+  <table mat-table [dataSource]="table_data">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Student Name</th>
+      <td mat-cell *matCellDef="let student">{{student.name}}</td>
+    </ng-container>
+    <ng-container matColumnDef="subject">
+      <th mat-header-cell *matHeaderCellDef>Student subject</th>
+      <td mat-cell *matCellDef="let student">{{student.subject}}</td>
+    </ng-container>
+    <ng-container matColumnDef="rollNo">
+      <th mat-header-cell *matHeaderCellDef>Student rollNo</th>
+      <td mat-cell *matCellDef="let student">{{student.rollNo}}</td>
+    </ng-container>
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef>Student age</th>
+      <td mat-cell *matCellDef="let student">{{student.age}}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="col_names"></tr>
+    <tr mat-row *matRowDef="let row; columns: col_names;"></tr>
+  </table>
+
+  <br><br>
+
   <mat-paginator [length]="100" [pageSize]="20" [pageSizeOptions]="[5,10,20]">
 
   </mat-paginator>
