@@ -10,6 +10,8 @@ import {CoreModule} from "./core/core.module";
 import { ChatComponent } from './components/chat/chat.component';
 import { UsersComponent } from './components/users/users.component';
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
+import { HelloComponent } from './components/hello/hello.component';
+import { CounterActionComponent } from './components/counter-action/counter-action.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { EventBindingComponent } from './components/event-binding/event-binding.
     ChatComponent,
     UsersComponent,
     UserComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    HelloComponent,
+    CounterActionComponent
 
   ],
   imports: [
