@@ -1,0 +1,19 @@
+p{
+  font-family: Suruma, serif;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.curly{
+  font-style: italic;
+}
+
+.red{
+  color: red;
+}
+
+.highlight{
+  background: yellow;
+}
