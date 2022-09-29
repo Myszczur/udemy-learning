@@ -13,6 +13,8 @@ import { EventBindingComponent } from './components/event-binding/event-binding.
 import { HelloComponent } from './components/hello/hello.component';
 import { CounterActionComponent } from './components/counter-action/counter-action.component';
 import { ClassBindingsComponent } from './components/class-bindings/class-bindings.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ClassBindingsComponent } from './components/class-bindings/class-bindin
     EventBindingComponent,
     HelloComponent,
     CounterActionComponent,
-    ClassBindingsComponent
+    ClassBindingsComponent,
+    ParentComponent,
+    ChildComponent
 
   ],
   imports: [
