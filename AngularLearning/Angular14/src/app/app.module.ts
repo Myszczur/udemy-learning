@@ -12,6 +12,7 @@ import { UsersComponent } from './components/users/users.component';
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
 import { HelloComponent } from './components/hello/hello.component';
 import { CounterActionComponent } from './components/counter-action/counter-action.component';
+import { ClassBindingsComponent } from './components/class-bindings/class-bindings.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CounterActionComponent } from './components/counter-action/counter-acti
     UserComponent,
     EventBindingComponent,
     HelloComponent,
-    CounterActionComponent
+    CounterActionComponent,
+    ClassBindingsComponent
 
   ],
   imports: [

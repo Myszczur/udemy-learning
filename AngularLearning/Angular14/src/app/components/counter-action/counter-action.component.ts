@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-counter-action',
@@ -7,6 +7,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class CounterActionComponent implements OnInit {
 
+  // @Input() counter: number = 0;
   @Output() counterChange: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {
@@ -16,7 +17,9 @@ export class CounterActionComponent implements OnInit {
   }
 
   handleButton(operation: string) {
-    this.counterChange.emit(operation);
+    // operation == 'INC' ? this.counter++ : this.counter--;
+    // @ts-ignore
+    this.counterChange.emit(this.counter);
     console.log(operation);
   }
 
