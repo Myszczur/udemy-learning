@@ -2,7 +2,7 @@
   <ul>
     <li
       *ngFor="let users of users">
-      <a routerLink="./{{users.id}}">{{users.name}}</a>
+      <app-user [user]="users"></app-user>
     </li>
   </ul>
 </div>
