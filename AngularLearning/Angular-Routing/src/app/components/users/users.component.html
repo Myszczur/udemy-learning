@@ -1,0 +1,12 @@
+<div>
+  <ul>
+    <li
+      *ngFor="let users of users">
+      <app-user [user]="users"></app-user>
+    </li>
+  </ul>
+</div>
+<hr>
+<div>
+  <app-users-detail></app-users-detail>
+</div>
