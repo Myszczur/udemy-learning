@@ -11,6 +11,8 @@ import { UsersComponent } from './components/users/users.component';
 import { UsersDetailComponent } from './components/users-detail/users-detail.component';
 import { UserComponent } from './components/user/user.component';
 import { PlaceholderComponent } from './components/placeholder/placeholder.component';
+import {AuthGuard} from "./guards/auth/auth.guard";
+import {ConfirmationGuard} from "./guards/confirmation/confirmation.guard";
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import { PlaceholderComponent } from './components/placeholder/placeholder.compo
     AppRoutingModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthGuard, ConfirmationGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,9 +7,10 @@ import {UsersComponent} from "./components/users/users.component";
 import {UsersDetailComponent} from "./components/users-detail/users-detail.component";
 import {PlaceholderComponent} from "./components/placeholder/placeholder.component";
 import {AuthGuard} from "./guards/auth/auth.guard";
+import {ConfirmationGuard} from "./guards/confirmation/confirmation.guard";
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
+  {path: 'home', component: HomeComponent, canDeactivate: [ConfirmationGuard]},
   {path: 'blog', component: BlogComponent, canActivate: [AuthGuard]},
   {path: 'about', component: AboutComponent},
   {
