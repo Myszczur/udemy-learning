@@ -249,11 +249,11 @@ export class UsersDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe((params) => {
-      this.user = this.users.filter((user) => {
-        return user.id === +params.id;
-      })[0];
-    });
-    this.activatedRoute.queryParams.subscribe((qs) => Console.log(qs));
+    // this.activatedRoute.params.subscribe((params) => {
+    //   this.user = this.users.filter((user) => {
+    //     return user.id === +params.id;
+    //   })[0];
+    // });
+    // this.activatedRoute.queryParams.subscribe((qs) => Console.log(qs));
   }
 }
