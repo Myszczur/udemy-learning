@@ -13,6 +13,7 @@ import { UserComponent } from './components/user/user.component';
 import { PlaceholderComponent } from './components/placeholder/placeholder.component';
 import {AuthGuard} from "./guards/auth/auth.guard";
 import {ConfirmationGuard} from "./guards/confirmation/confirmation.guard";
+import {UserService} from "./services/user/user.service";
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import {ConfirmationGuard} from "./guards/confirmation/confirmation.guard";
     AppRoutingModule,
     AppRoutingModule
   ],
-  providers: [AuthGuard, ConfirmationGuard],
+  providers: [AuthGuard, ConfirmationGuard, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
