@@ -3,7 +3,7 @@ package challenges.tv;
 public class Main {
 
     public static void main(String[] args) {
-                /*
+        /*
             Stwórz klasę Tv opisującą telewizor wraz z zmiennymi jak:
             producent, model, rok produkcji i dodatkowe, które będą
             pasowały do tego produktu.
