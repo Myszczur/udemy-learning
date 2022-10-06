@@ -14,8 +14,7 @@ public class Item {
 
     public static Item getItem() {
         int id = Item.getNextId();
-        Item item = new Item(id);
-        return item;
+        return new Item(id);
     }
 
     public static void printNumItems() {
