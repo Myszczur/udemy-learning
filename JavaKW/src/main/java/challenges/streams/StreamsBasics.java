@@ -3,7 +3,7 @@ package challenges.streams;
 import java.util.ArrayList;
 
 public class StreamsBasics {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         ArrayList<String> arr = new ArrayList<>();
         arr.add("Asia");
         arr.add("Paweł");
@@ -14,7 +14,7 @@ public class StreamsBasics {
 
         arr.stream().filter(str -> str.length() > 3 && str.length() < 7)
                 .filter(str -> str.startsWith("A") || str.startsWith("P"))
-                .forEach(str -> System.out.println(str));
+                .forEach(System.out::println);
 
 
         ArrayList<Car> cars = new ArrayList<>();
@@ -29,7 +29,7 @@ public class StreamsBasics {
         cars.stream().filter(car -> car.rating > 3)
                 .filter(car -> car.price >= 200000 && car.price < 600000)
                 .filter(car -> car.topSpeed >= 200 && car.topSpeed < 300)
-                .forEach(car -> System.out.println(car));
+                .forEach(System.out::println);
 
     }
 }

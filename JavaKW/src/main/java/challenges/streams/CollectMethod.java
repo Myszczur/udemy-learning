@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class CollectMethod {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         ArrayList<Car> cars = new ArrayList<>();
         cars.add(new Car("Dodge", 250, 300000, 4));
@@ -16,11 +16,10 @@ public class CollectMethod {
         cars.add(new Car("Porsche", 300, 800000, 5));
         cars.add(new Car("Bmw", 240, 300000, 5));
 
-        List<Car> list = cars.stream().filter(car -> car.price < 300000)
-                .collect(Collectors.toList());
+        List<Car> list = cars.stream().filter(car -> car.price < 300000).toList();
 
         ArrayList<Car> carArrayList = new ArrayList<>(list);
-        carArrayList.forEach(car -> System.out.println(car));
+        carArrayList.forEach(System.out::println);
 
     }
 }

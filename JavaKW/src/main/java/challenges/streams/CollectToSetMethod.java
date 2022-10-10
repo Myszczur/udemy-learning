@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class CollectToSetMethod {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         ArrayList<Car> cars = new ArrayList<>();
         cars.add(new Car("Dodge", 250, 300000, 4));
@@ -23,7 +23,7 @@ public class CollectToSetMethod {
         Set<Car> set = cars.stream().filter(car -> car.price < 300000)
                 .collect(Collectors.toSet());
 
-        set.forEach(car -> System.out.println(car));
+        set.forEach(System.out::println);
 
 
     }

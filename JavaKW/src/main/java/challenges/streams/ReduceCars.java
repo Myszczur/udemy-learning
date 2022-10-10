@@ -3,7 +3,7 @@ package challenges.streams;
 import java.util.ArrayList;
 
 public class ReduceCars {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         ArrayList<Car> cars = new ArrayList<>();
         cars.add(new Car("Dodge", 250, 300000, 4));

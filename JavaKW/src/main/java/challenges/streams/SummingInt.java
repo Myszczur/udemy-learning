@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class SummingInt {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         ArrayList<Car> cars = new ArrayList<>();
         cars.add(new Car("Dodge", 250, 300000, 4));
@@ -15,7 +15,7 @@ public class SummingInt {
         cars.add(new Car("Porsche", 300, 800000, 5));
         cars.add(new Car("Bmw", 240, 300000, 5));
 
-        int totalPrice = cars.stream().collect(Collectors.summingInt(car -> car.price));
+        int totalPrice = cars.stream().mapToInt(car -> car.price).sum();
 
         System.out.println(totalPrice);
     }
