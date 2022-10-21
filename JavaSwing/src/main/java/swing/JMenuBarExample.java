@@ -60,7 +60,6 @@ public class JMenuBarExample extends JFrame {
         file.add(radio2);
         file.add(radio3);
 
-
         ActionListener listener = e -> {
             Object source = e.getSource();
             if (source.equals(exit)) {
