@@ -2,12 +2,15 @@ package swing;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class TestCalculator {
 
     private JLabel screen;
 
     public TestCalculator() {
+
         JFrame frame = new JFrame();
 
         screen = new JLabel("0", JLabel.RIGHT);
@@ -21,6 +24,7 @@ public class TestCalculator {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
+
     private JPanel makeButtonsPanel() {
         JPanel panel = new JPanel(new GridLayout(4, 4));
 
@@ -43,6 +47,11 @@ public class TestCalculator {
         b.setFont(new Font("Arial", Font.BOLD, 16));
         return b;
     }
+
+    private ActionListener ctionListener = e -> {
+        String v = ((JButton) e.getSource()).getText();
+        System.out.println(v);
+    };
 
     public static void main(String[] args) {
         TestCalculator calc = new TestCalculator();
